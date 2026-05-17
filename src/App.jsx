@@ -31,7 +31,7 @@ const App = () => {
     setTask(copyTask)
   })
   return (
-    <div className='h-screen bg-black lg:flex text-white p-10 gap-10'>
+    <div className='min-h-screen bg-black lg:flex text-white p-10 gap-10'>
       <form onSubmit={(e) => {
         submithandler(e)
       }} className='flex items-start gap-4  lg:w-1/2 flex-col '>
@@ -59,7 +59,7 @@ const App = () => {
 
       <div className='p-10 lg:border-l-2 lg:w-1/2'>
         <h1 className='font-bold text-3xl '>Recent notes</h1>
-        <div className=' flex flex-wrap items-start justify-start  mt-5  gap-5 overflow-auto'>
+        <div className=' flex flex-wrap items-start justify-start  mt-5  gap-5 overflow-y-auto'>
           {task.map((ele, idx) => {
             return <div key={idx} className='h-52 w-40 bg-white  text-black justify-between relative flex flex-col rounded-2xl p-8 bg-[url("https://png.pngtree.com/background/20250201/original/pngtree-pink-watercolor-flower-rosehip-frame-page-border-picture-image_13243520.jpg")] bg-cover'>
               <div>
